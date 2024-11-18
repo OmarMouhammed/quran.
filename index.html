@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>إذاعة القرآن الكريم</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="radio-container">
+        <!-- إذاعة القرآن الكريم من القاهرة -->
+        <div class="radio-box">
+            <div class="radio-item">
+                <div class="radio-title">إذاعة القرآن الكريم من القاهرة</div>
+                <img src="القاهرة.jpg" class="radio-image" alt="قاهرة" />
+            </div>
+            <div class="audio-controls">
+                <button id="toggleButton">تشغيل</button>
+                <input type="range" id="seekBar" value="0" step="1" min="0" max="100">
+                <span id="currentTime">00:00</span>
+                <span id="liveIndicator">LIVE</span>
+                <span id="volumeIcon">🔊</span>
+                <input type="range" id="volumeControl" min="0" max="100" value="100">
+            </div>
+            <iframe id="quranAudio" width="1" height="1" src="https://www.youtube.com/embed/k2rEP-Tnuwg?enablejsapi=1" frameborder="0" allow="autoplay"></iframe>
+        </div>
+
+        <!-- إذاعة القرآن الكريم من السعودية -->
+        <div class="radio-box">
+            <div class="radio-item">
+                <div class="radio-title">إذاعة القرآن الكريم من السعودية</div>
+                <img src="السعودية.jpg" class="radio-image" alt="سعودية" />
+            </div>
+            <div class="audio-controls">
+                <button id="toggleButtonSaudi">تشغيل</button>
+                <input type="range" id="seekBarSaudi" value="0" step="1" min="0" max="100">
+                <span id="currentTimeSaudi">00:00</span>
+                <span id="liveIndicatorSaudi">LIVE</span>
+                <span id="volumeIconSaudi">🔊</span>
+                <input type="range" id="volumeControlSaudi" min="0" max="100" value="100">
+            </div>
+            <iframe id="quranAudioSaudi" width="1" height="1" src="https://www.youtube.com/embed/G0PC9JDC-2Y?enablejsapi=1" frameborder="0" allow="autoplay"></iframe>
+        </div>
+
+        <!-- إذاعة السنة النبوية من السعودية -->
+        <div class="radio-box">
+            <div class="radio-item">
+                <div class="radio-title">إذاعة السنة النبوية من السعودية</div>
+                <img src="سنة.jpg" class="radio-image" alt="سنة" />
+            </div>
+            <div class="audio-controls">
+                <button id="toggleButtonSaudiYear">تشغيل</button>
+                <input type="range" id="seekBarSaudiYear" value="0" step="1" min="0" max="100">
+                <span id="currentTimeSaudiYear">00:00</span>
+                <span id="liveIndicatorSaudiYear">LIVE</span>
+                <span id="volumeIconSaudiYear">🔊</span>
+                <input type="range" id="volumeControlSaudiYear" min="0" max="100" value="100">
+            </div>
+            <iframe id="quranAudioSaudiYear" width="1" height="1" src="https://www.youtube.com/embed/oq6QLX6DQJw?enablejsapi=1" frameborder="0" allow="autoplay"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li class="left"><a href="https://tharaaedu.com/contact-us/" target="_blank">تواصل معانا</a></li>
+            <li><a href="https://tharaaedu.com/about-us/" target="_blank">من نحن</a></li>
+            <li><a href="https://tharaaedu.com/courses/" target="_blank">خدمتنا</a></li>
+            <li class="right"><a href="#home">الرئيسية</a></li>
+        </ul>
+    </nav>
+    <h1>إذاعة القرآن الكريم</h1>
+    <div class="logo">
+        <img src="logo.png" alt="شعار الإذاعة">
+    </div>
+</header>
+</html>

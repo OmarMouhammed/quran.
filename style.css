@@ -1,0 +1,223 @@
+/* تنسيق الصفحة */
+body {
+    font-family: "GE SS", sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* تنسيق الحاوية التي تحتوي على الراديو */
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* تنسيق الصندوق */
+.radio-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* إذا كنت ترغب في تحديد عرض أقصى للصندوق */
+    height: 100px; /* تحديد ارتفاع ثابت للصندوق */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* توزيع العناصر داخل الصندوق */
+    text-align: center;
+}
+
+/* تنسيق العنصر الذي يحتوي على العنوان والصورة */
+.radio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* تنسيق العنوان داخل كل صندوق */
+.radio-title {
+    font-family: "GE SS", sans-serif;  /* تعيين خط GE SS */
+    font-weight: bold;                 /* تطبيق النمط Bold */
+    font-size: 1.5rem;
+    color: #a5172a;
+    text-align: left;
+    flex: 1;
+    gap: 10px;
+    margin-top: -70px;
+}
+
+/* تنسيق الصورة */
+.radio-image {
+    width: 20%; /* يجعل الصورة تأخذ كامل عرض الصندوق */
+    height: 100px; /* تحديد ارتفاع ثابت لجميع الصور */
+    object-fit: cover; /* يحافظ على التناسب بين الصورة والمربع المحدد لها */
+    border-radius: 5px; /* إضافة حواف ناعمة */
+    border: 1px solid #a5172a; /* إضافة حدود بلون متناسق مع التصميم */
+}
+
+/* تنسيق الزرار */
+#toggleButton, #toggleButtonSaudi, #toggleButtonSaudiYear {
+    background-color: #a5172a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggleButton:hover, #toggleButtonSaudi:hover, #toggleButtonSaudiYear:hover {
+    background-color: #5c000c;
+}
+
+/* تنسيق شريط التحكم */
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -70px;
+}
+
+#seekBar, #seekBarSaudi, #seekBarSaudiYear, #volumeControl, #volumeControlSaudi, #volumeControlSaudiYear {
+    width: 100px;
+    cursor: pointer;
+}
+
+#currentTime, #currentTimeSaudi, #currentTimeSaudiYear {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* تنسيق أيقونة الصوت */
+#volumeIcon, #volumeIconSaudi, #volumeIconSaudiYear {
+    font-size: 1.2rem;
+    color: #a5172a;
+}
+
+/* تنسيق عنصر LIVE */
+#liveIndicator, #liveIndicatorSaudi, #liveIndicatorSaudiYear {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#liveIcon, #liveIconSaudi, #liveIconSaudiYear {
+    font-size: 24px;
+    color: red;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+}
+
+/* تأثيرات الحركة للـLIVE */
+@keyframes liveAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+/* تنسيق الـheader */
+header {
+    background-color: #8B0000; /* اللون الأحمر الغامق */
+    padding: 20px 0; /* مسافة حول الـheader */
+    position: fixed; /* تثبيت الـheader في أعلى الصفحة */
+    top: 0; /* تحديد الموقع ليكون في أعلى الصفحة */
+    width: 100%; /* عرض الـheader 100% عشان يغطي العرض الكامل */
+    height: 10%;
+    z-index: 10; /* لتأكيد أن الـheader فوق باقي المحتوى */
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر بين اليمين واليسار */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    padding: 10px 20px;
+}
+
+/* تنسيق الـnavbar */
+.navbar ul {
+    list-style-type: none; /* إزالة النقاط */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%; /* لتغطية المسافة بالكامل */
+    justify-content: space-between; /* توزيع العناصر بين الطرفين */
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar .right {
+    margin-right: auto; /* لتحريك "الرئيسية" إلى اليمين */
+}
+
+.navbar .left {
+    margin-left: auto; /* لتحريك "تواصل معنا" إلى الشمال */
+}
+
+.navbar a {
+    color: #fff; /* لون النص */
+    text-decoration: none; /* إزالة التحديد */
+    font-size: 18px; /* حجم الخط */
+    font-weight: bold; /* جعل النص عريض */
+    padding: 10px 15px; /* مسافة حول الرابط */
+    transition: all 0.3s ease-in-out; /* تأثير سلس */
+}
+
+/* تأثير hover للروابط */
+.navbar a:hover {
+    color: #FFD700; /* اللون الذهبي عند الـhover */
+    transform: scale(1.1); /* تكبير الرابط */
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700; /* تأثير نيون ذهبي */
+}
+
+/* تنسيق العنوان */
+h1 {
+    position: absolute; /* تحديد الموقع بشكل ثابت */
+    top: 50%; /* تحديد الموقع من أعلى الـheader */
+    left: 50%; /* تحديد الموقع من اليسار */
+    transform: translate(-50%, -50%); /* لتحريك العنصر بحيث يتوسط تماماً */
+    color: #fff; /* لون النص */
+    font-size: 24px; /* حجم الخط */
+    margin: 0; /* إزالة المسافة الفارغة حول النص */
+    text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+    font-weight: bold; /* جعل النص عريض */
+    transition: all 0.1s ease-in-out; /* إضافة تأثيرات سلسة */
+}
+
+/* تأثير hover بنمط نيون */
+h1:hover {
+    color: #FFD700; /* لون النص يصبح أخضر نيون */
+    text-shadow: 
+        0 0 5px #FFD700, /* تأثير الإضاءة الأخضر */
+        0 0 10px #FFD700, /* تأثير الإضاءة الأخضر */
+        0 0 15px #FFD700, /* تأثير الإضاءة الأخضر */
+        0 0 20px #FFD700, /* تأثير الإضاءة الأخضر */
+        0 0 30px #FFD700, /* تأثير الإضاءة الأخضر */
+        0 0 40px #FFD700; /* تأثير الإضاءة الأخضر */
+}
+
+/* تنسيق الشعار */
+.logo {
+    position: absolute; /* تثبيت الشعار */
+    top: 50%; /* تحديد الموقع من أعلى الـheader */
+    right: 20%; /* تحديد المسافة من اليمين */
+    transform: translateY(-50%); /* لتحريك الشعار ليتوسط عمودياً */
+}
+
+.logo img {
+    width: 70px; /* تحديد عرض الشعار */
+    height: auto; /* الحفاظ على نسبة الصورة */
+}
